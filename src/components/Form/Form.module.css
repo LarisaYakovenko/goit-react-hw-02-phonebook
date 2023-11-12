@@ -12,20 +12,15 @@
 .label {
   display: flex;
   flex-direction: column;
-  align-items: start;
-
+  align-items: flex-start;
   gap: 10px;
   width: 300px;
-
-
   font-size: 12px;
-
 }
 .input {
   width: 100%;
   border-radius: 10px;
   border: none;
-
   padding: 5px 20px;
   font-size: 18px;
   font-style: italic;
@@ -46,7 +41,6 @@
   font-size: 18px;
   font-style: italic;
   box-shadow: 20px 20px 20px rgba(105, 137, 84, 0.5);
-
   transition: all 0.5s ease-in-out;
 
 }
