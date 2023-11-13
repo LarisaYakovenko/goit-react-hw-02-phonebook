@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 import css from './App.module.css';
 import {Form} from './Form/Form'
 import { Filter } from "./Filter/Filter";
@@ -25,13 +25,9 @@ export class App extends Component {
     }
     this.setState({
       contacts: [
-        ...contacts, {id: this.generadedId(), name: data.name, number: data.number},
+        ...contacts, {id: nanoid, ...data},
       ],
     });
-  };
-
-  generadedId = () => {
-    return nanoid();
   };
 
   handleChangeFilter = e => {
@@ -49,8 +45,6 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== deleteId),
     }))
-    this.setState({filter: ''});
-
   };
 
 
