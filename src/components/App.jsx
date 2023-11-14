@@ -19,7 +19,7 @@ export class App extends Component {
   formSubmit = data => {
     const { contacts } = this.state;
 
-    if (contacts.some(contact => contact.name === data.name)) {
+    if (contacts.some(contact => contact.name.toLowerCase() === data.name.toLowerCase())) {
       alert(`${data.name} is already in contacts.`);
       return;
     }
